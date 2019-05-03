@@ -1,0 +1,45 @@
+.Phmain-div{
+    display: flex;
+}
+
+.Phleft-div{
+    width: 65%;
+    height: 90%;
+    margin-top: 50px;
+    border: 1px solid lightgrey;
+    margin-left: 79px;
+    padding-left: 100px; 
+    padding-top: 80px;
+    padding-bottom: 700px;
+    margin-bottom:40px;
+    }
+
+.Phright-div{
+    width: 85%;
+    height: 70%;
+    border: 1px solid lightgrey;
+    padding: 15px;
+    margin-top: 50px;
+    margin-right: 79px;
+    float: left;
+    margin-bottom:100px; 
+}
+
+.Pdetails{
+    padding: 19px;
+    margin: 10px;
+}
+
+.PaddToCart{
+    height: 15%;
+    width: 30%;
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 10px; 
+    color: blue;
+    
+}
+
+.Pprice{
+    color: gold;
+}

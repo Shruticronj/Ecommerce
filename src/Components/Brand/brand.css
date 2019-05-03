@@ -1,0 +1,12 @@
+.brand{
+    background-color: lightgray;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px; 
+}
+
+.outer-brand{
+    padding-left: 10px;
+}
