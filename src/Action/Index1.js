@@ -40,16 +40,11 @@ export const filterResult = (array) => {
     }
 }
 
-export const lowToHigh = (value) => {
+export const filterPrice = (value) => {
     return {
-        type: actionType.LOW_TO_HIGH,
+        type: actionType.FILTER_PRICE,
         payload: value
     }
 }
 
-export const highToLow = (value) => {
-    return {
-        type: actionType.LOW_TO_HIGH,
-        payload: value
-    }
-}
+

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {add} from '../../Action/Index1';
+import { connect } from 'react-redux';
 import './phones.css';
 
 class Phones extends React.Component {
@@ -16,7 +18,7 @@ class Phones extends React.Component {
                 <div>
                     <Link to={{
                         pathname: '/PhoneDetails', state: {
-                            name: this.props.item.name, id: this.props.item.id, price: this.props.item.price, description: this.props.item.description,
+                            name: this.props.item.name, price: this.props.item.price, description: this.props.item.description,
                             image: this.props.item.image, brand: this.props.item.brand, size: this.props.item.size, cpu: this.props.item.cpu, memory: this.props.item.memory,
                             camera: this.props.item.camera, display: this.props.item.display, battery: this.props.item.battery
                         }
@@ -26,11 +28,17 @@ class Phones extends React.Component {
                     <p>{this.props.item.description}</p>
                 </div>
                 <div>
-                    <button>ADD TO CART</button>
+                    <button onClick={()=>{this.props.dispatch(add(this.props.item))}}>ADD TO CART</button>
                 </div>
             </div>
         )
     }
 }
 
-export default Phones;
+const mapStateToProps = (state) => {
+    return {
+        data: state
+    };
+}
+
+export default connect(mapStateToProps)(Phones);

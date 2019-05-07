@@ -10,13 +10,13 @@
     margin-left: 79px;
     padding-left: 100px; 
     padding-top: 80px;
-    padding-bottom: 700px;
+    padding-bottom: 604px;
     margin-bottom:40px;
     }
 
 .Phright-div{
     width: 85%;
-    height: 70%;
+    height: 170%;
     border: 1px solid lightgrey;
     padding: 15px;
     margin-top: 50px;
@@ -26,18 +26,17 @@
 }
 
 .Pdetails{
-    padding: 19px;
+    padding: 20px;
     margin: 10px;
-}
+    }
 
 .PaddToCart{
     height: 15%;
     width: 30%;
     text-align: center;
-    border: 2px solid blue;
-    border-radius: 10px; 
     color: blue;
-    
+    margin: auto;
+    margin-bottom: 25px;
 }
 
 .Pprice{

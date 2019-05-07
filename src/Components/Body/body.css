@@ -25,18 +25,25 @@
 }
 
 .right-div{
-    width: 70%;
+    width: 150%;
     height: 90%;
+
 }
 
 .body3{
     height: 10%;
+    width: 150%;
 }
 
 .body4{
-    width: 100%;
-    height: 80%;
+    width: 82%;
+    height: 70%;
+    display: flex;
+    display: block;
+    flex-direction: row;
+    
 }
+
 
 .pagination a{
     height: 10%;

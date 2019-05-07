@@ -7,7 +7,7 @@ class SubPrice extends React.Component {
     render() {
         return (
             <div>
-                <input type="radio" value="add" onChange={this.props.fun} />{this.props.value}
+                <input type="radio" name=" " onChange={(event)=>{this.props.fun(event,this.props.text)}} />{this.props.text}
             </div>
         )
     }

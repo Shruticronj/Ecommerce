@@ -4,8 +4,19 @@ const getInitialState = {
   flag: false,
   cart_arr: [],
   filter_arr: [],
-  result_arr: []
+  result_arr: [],
+  pdummy: []
 }
+
+ const compare = (a, b) => {
+  if (a.price < b.price) {
+  return -1
+  }
+  if (a.price > b.price) {
+  return 1
+  }
+  return 0
+  }
 
 export const Counter = (state = getInitialState, action) => {
 
@@ -88,18 +99,17 @@ export const Counter = (state = getInitialState, action) => {
       }
       break;
 
-      case actionType.LOW_TO_HIGH:
-      return {
-        ...state,
-        filter_arr: state.result_arr.sort,
-        flag: false
+      case actionType.FILTER_PRICE:
+      if (action.payload === "Low to High"){
+        state.pdummy = [...state.filter_arr.sort(compare)]
+      } else if (action.payload === "High to Low"){
+        state.pdummy = [...state.filter_arr.sort(compare)];
+        state.pdummy = state.pdummy.reverse();
       }
-      break;
-
-      case actionType.HIGH_TO_LOW:
+    
       return {
         ...state,
-        filter_arr: state.result_arr,
+        filter_arr: state.pdummy,
         flag: false
       }
       break;

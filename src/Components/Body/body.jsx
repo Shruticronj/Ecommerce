@@ -20,6 +20,7 @@ class Body extends React.Component {
   }
 
   componentWillReceiveProps(nextprops) {
+    console.log("NextProps-->>",nextprops)
     this.setState({
       tempArr: this.paginate(nextprops.new_arr, 6, this.state.activePage)
     })
@@ -39,8 +40,29 @@ class Body extends React.Component {
   paginate(array, page_size, page_number) {
     return array.slice((page_number - 1) * page_size, (page_number) * page_size);
   }
+  separateElement = (flag) =>{
+    console.log("flag====>", flag) 
+    if(flag){
+      var number=3;
+    }
+    else{
+    var number=4;
+    }
+    let separateElements = [];
+    var totalItems = this.state.tempArr;
 
+    for(let i = 0; i < totalItems.length; i+=number) {
+    let oneRow = [];
+    oneRow.push(totalItems.slice(i, i+number).map((item, index) => {
+    return(<div><Phones key={index}
+    item={item} /></div>) 
+  }))
+    separateElements.push(oneRow.map(itm => {return <div>{itm}</div>}))
+  }
+  return separateElements;
+  }
   render() {
+
     return (
       <div className="main-div">
         <div className="left-div">
@@ -53,16 +75,10 @@ class Body extends React.Component {
         </div>
         <div className="right-div">
           <div className="body3">
-            <ChangeLayout />
+            <ChangeLayout myfun={this.separateElement}/>
           </div>
           <div className="body4">
-            {
-              this.state.tempArr && this.state.tempArr.length > 0 ?
-                this.state.tempArr.map((item, index) => {
-                  return (<Phones key={index}
-                    item={item} />)
-                }) : null
-            }
+          {this.separateElement()}
           </div>
           <div className="pagination">
             <Pagination

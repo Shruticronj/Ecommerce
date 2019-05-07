@@ -24,33 +24,22 @@ class PhoneDetails extends Component {
                     <div className="Pdetails">
                         <h2>{this.props.location.state.name}</h2><br />
                         <div className='Pprice'> <h2>{this.props.location.state.price}</h2><br /></div>
-                        <label><h4>Description:</h4>
+                        <h4>Description</h4>
                             <p>{this.props.location.state.description}</p>
-                        </label>
-                        <label><h4>Brand:</h4>
-                            <p>{this.props.location.state.brand}</p>
-                        </label>
-                        <label><h4>ID:</h4>
-                            <p>{this.props.location.state.id}</p>
-                        </label>
-                        <label><h4>Size:</h4>
+                        <h4>Brand</h4>
+                        <p>{this.props.location.state.brand}</p>
+                        <h4>Size</h4>
                             <p>{this.props.location.state.size}</p>
-                        </label>
-                        <label><h4>Camera:</h4>
+                        <h4>Camera</h4>
                             <p>{this.props.location.state.camera}</p>
-                        </label>
-                        <label><h4>CPU:</h4>
+                        <h4>CPU</h4>
                             <p>{this.props.location.state.cpu}</p>
-                        </label>
-                        <label><h4>Memory:</h4>
+                        <h4>Memory</h4>
                             <p>{this.props.location.state.memory}</p>
-                        </label>
-                        <label><h4>Display:</h4>
+                        <h4>Display</h4>
                             <p>{this.props.location.state.display}</p>
-                        </label>
-                        <label><h4>Battery:</h4>
+                        <h4>Battery</h4>
                             <p>{this.props.location.state.battery}</p>
-                        </label>
                         <hr />
                         <hr />
                     </div>

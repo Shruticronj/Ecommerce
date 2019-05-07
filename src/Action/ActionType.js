@@ -4,5 +4,4 @@ export const DELETE = 'DELETE';
 export const ADD = 'ADD';
 export const PASSING_DATA = 'PASSING_DATA';
 export const FILTER_RESULT = 'FILTER_RESULT';
-export const LOW_TO_HIGH = 'LOW_TO_HIGH';
-export const HIGH_TO_LOW = 'HIGH_TO_LOW';
+export const FILTER_PRICE = 'FILTER_PRICE';

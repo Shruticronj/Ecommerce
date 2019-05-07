@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import SubBrand from '../Sub_Brand/sub_brand';
 import './brand.css';
 
-
 class Brands extends React.Component {
     constructor() {
         super();
@@ -36,7 +35,6 @@ class Brands extends React.Component {
                 <div>
                     <p className="brand"><b>Brands</b></p>
                 </div>
-
                 {this.state.arr.map((item, index) => {
                     return (
                         <div className="outer-brand">
