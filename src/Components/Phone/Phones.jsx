@@ -15,7 +15,7 @@ class Phones extends React.Component {
         return (
             <div className="phones">
                 <div><img alt="phone" width="100%" height="80%" src={this.props.item.image}></img></div>
-                <div>
+                <div className="addto">
                     <Link to={{
                         pathname: '/PhoneDetails', state: {
                             name: this.props.item.name, price: this.props.item.price, description: this.props.item.description,
@@ -28,7 +28,7 @@ class Phones extends React.Component {
                     <p>{this.props.item.description}</p>
                 </div>
                 <div>
-                    <button onClick={()=>{this.props.dispatch(add(this.props.item))}}>ADD TO CART</button>
+                    <button className="addToCart" onClick={()=>{this.props.dispatch(add(this.props.item))}}>ADD TO CART</button>
                 </div>
             </div>
         )

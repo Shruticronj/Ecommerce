@@ -39,6 +39,17 @@
     margin-bottom: 25px;
 }
 
-.Pprice{
+.addToCart{
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: lightskyblue;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.Product_price{
     color: gold;
 }

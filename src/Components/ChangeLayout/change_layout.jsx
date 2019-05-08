@@ -12,14 +12,14 @@ class ChangeLayout extends React.Component {
         return (
             <div>
                 <div className="cl1">
-                    <p className="para"> <b>Change Layout:</b></p>
-                    <div className="cl2" onClick={()=>{this.props.myfun(this.state.flag)}}> 
+                    <p className="para"></p>
+                    <div className={this.props.valid ? "cl2 active" : "cl2"} onClick={()=>{this.props.myfun(this.state.flag)}}> 
                         <div className="cl3"></div>
                         <div className="cl3"></div>
                         <div className="cl3"></div>
                     </div>
             
-                    <div className="cl4" onClick={()=>{this.props.myfun(!this.state.flag)}}>
+                    <div className={!this.props.valid ? "cl4 active" : "cl4 "} onClick={()=>{this.props.myfun(!this.state.flag)}}>
                         <div className="cl5"></div>
                         <div className="cl5"></div>
                         <div className="cl5"></div>

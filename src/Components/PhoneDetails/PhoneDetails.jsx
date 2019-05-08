@@ -23,7 +23,7 @@ class PhoneDetails extends Component {
                 <div className="Phright-div">
                     <div className="Pdetails">
                         <h2>{this.props.location.state.name}</h2><br />
-                        <div className='Pprice'> <h2>{this.props.location.state.price}</h2><br /></div>
+                        <div className='Product_price'> <h2>{this.props.location.state.price}</h2><br /></div>
                         <h4>Description</h4>
                             <p>{this.props.location.state.description}</p>
                         <h4>Brand</h4>
@@ -45,7 +45,7 @@ class PhoneDetails extends Component {
                     </div>
                     <div>
                         <div className="PaddToCart">
-                            <button onClick={() => { this.props.addToCart(this.props.location.state) }}>ADD TO CART</button>
+                            <button className="addToCart"onClick={() => { this.props.addToCart(this.props.location.state) }}>ADD TO CART</button>
                         </div>
                     </div>
                 </div>

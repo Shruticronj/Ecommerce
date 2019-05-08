@@ -8,10 +8,11 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
     }
+    
     render() {
         return (
             <div className='header'>
-                <p>Ecommerce</p>
+               <div><Link to='/'><p className="eco">Ecommerce</p></Link></div>
                 <div className='logo'>
                     <Logo />
                 </div>

@@ -15,12 +15,12 @@ class Body extends React.Component {
     super(props);
     this.state = {
       tempArr: [],
-      activePage: 1
+      activePage: 1,
+      valid: true
     }
   }
 
   componentWillReceiveProps(nextprops) {
-    console.log("NextProps-->>",nextprops)
     this.setState({
       tempArr: this.paginate(nextprops.new_arr, 6, this.state.activePage)
     })
@@ -28,6 +28,7 @@ class Body extends React.Component {
 
   componentDidMount() {
     this.props.dispatch(passingData(productList))
+    this.props.history.push("/");
   }
 
   handlePageChange = (pageNumber) => {
@@ -40,27 +41,37 @@ class Body extends React.Component {
   paginate(array, page_size, page_number) {
     return array.slice((page_number - 1) * page_size, (page_number) * page_size);
   }
-  separateElement = (flag) =>{
-    console.log("flag====>", flag) 
-    if(flag){
-      var number=3;
+
+  validFlag = (flag) => {
+    this.setState({
+      valid: flag
+    })
+  }
+
+  separateElement = () =>{
+    let number =3
+    if(this.state.valid){
+      number=3;
     }
     else{
-    var number=4;
+      number=4;
     }
     let separateElements = [];
     var totalItems = this.state.tempArr;
 
     for(let i = 0; i < totalItems.length; i+=number) {
     let oneRow = [];
+
     oneRow.push(totalItems.slice(i, i+number).map((item, index) => {
-    return(<div><Phones key={index}
-    item={item} /></div>) 
-  }))
-    separateElements.push(oneRow.map(itm => {return <div>{itm}</div>}))
+        return(<div><Phones key={index}
+        item={item} /></div>) 
+    }))
+
+    separateElements.push(oneRow.map(itm => {return <div className="oneRow">{itm}</div>}))
   }
-  return separateElements;
+    return separateElements;
   }
+
   render() {
 
     return (
@@ -75,12 +86,23 @@ class Body extends React.Component {
         </div>
         <div className="right-div">
           <div className="body3">
-            <ChangeLayout myfun={this.separateElement}/>
+            <ChangeLayout myfun={this.validFlag}
+            valid={this.state.valid}/>
           </div>
           <div className="body4">
-          {this.separateElement()}
+          {this.state.valid ? 
+            <div className="three">
+            {this.separateElement()}
+            </div>
+          :
+            <div className="four">
+            {this.separateElement()}
+            </div>
+          }
+          
           </div>
           <div className="pagination">
+          
             <Pagination
               activePage={this.state.activePage}
               itemsCountPerPage={6}

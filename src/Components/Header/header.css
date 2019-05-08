@@ -1,22 +1,24 @@
-.header{
-    background-color: black;
-    color: white;
-    height: 20%;
-    padding-top: 10px;
-    padding-left: 30px;
-    display: flex;
+.header {
+  background-color: black;
+  color: white;
+  height: 20%;
+  padding-top: 10px;
+  padding-left: 30px;
+  display: flex;
 }
 
-.logo{
-    padding-left: 500px;
+.eco {
+  color: aliceblue;
+}
+.logo {
+  padding-left: 565px;
 }
 
-.cart1{
-    padding-left: 5px;
-    color: lightslategray;
+.cart1 {
+  padding-left: 5px;
+  color: lightslategray;
 }
 
-.cart2{
-    color: aliceblue;
+.cart2 {
+  color: aliceblue;
 }
-

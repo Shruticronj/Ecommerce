@@ -1,57 +1,82 @@
-.main-div{
-    display: flex;
+.main-div {
+  display: flex;
 }
 
-.left-div{
-    width:30%;
-    height: 80%;
+.left-div {
+  width: 30%;
+  height: 80%;
 }
 
-.body1{
-    height: 60%;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-top: 7px;
-    margin-left: 5px;
-    padding-bottom: 10px;
+.body1 {
+  height: 60%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 7px;
+  margin-left: 15px;
+  padding-bottom: 10px;
 }
 
-.body2{
-    margin-top: 7px;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-left: 5px;
-    padding-bottom: 10px;
+.body2 {
+  margin-top: 7px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 15px;
+  padding-bottom: 10px;
 }
 
-.right-div{
-    width: 150%;
-    height: 90%;
-
+.right-div {
+  width: 80%;
+  height: 70%;
 }
 
-.body3{
-    height: 10%;
-    width: 150%;
+.body3 {
+  height: 10%;
+  width: 160%;
+  margin-left: 15px;
 }
 
-.body4{
-    width: 82%;
-    height: 70%;
-    display: flex;
-    display: block;
-    flex-direction: row;
-    
+.oneRow {
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+}
+.body4 {
+  width: 100%;
+  margin-left: 15px;
+}
+.three {
+  width: 100%;
+  height: 60%;
 }
 
+.four {
+  width: 100%;
+  height: 60%;
+}
 
-.pagination a{
-    height: 10%;
-    width: 30%;
-    background-color: lightgray;
-    justify-content: space-evenly;
-    font-size: 20px;
-    padding: 10px;
-    border: 1px solid black;
-    
+.pagination :hover{
+  background-color: yellow
+}
+
+.pagination a {
+  height: 10%;
+  width: 30%;
+  background-color: lightgray;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  
+}
+
+.pagination a.active{
+  background-color: blueviolet;
+}
+
+.pagination{
+  margin-bottom: 60px;
+  margin-left: 60px;
+  
 }
